@@ -111,10 +111,6 @@ bytedancedemo1/
   - 存储用户偏好设置（用户名、签名等）
   - 轻量级键值对存储
 
-#### 其他
-- **AndroidX Activity**: 1.8.0
-- **JUnit**: 4.13.2 (测试)
-- **Espresso**: 3.5.1 (UI测试)
 
 ## 📦 依赖管理
 
@@ -136,30 +132,11 @@ public class User {
 }
 ```
 
-#### 使用场景
-- **注册时**: 检查用户名是否已存在，存储新用户到 Room 数据库
-- **登录时**: 从 Room 数据库验证用户账号和密码
-- **不存储**: 不在注册或登录时存储到 SharedPreferences
-
 #### 预埋账号
 应用首次启动时会自动创建以下测试账号：
 - 用户名: `admin`，密码: `123456`
 - 邮箱: `admin@example.com`，密码: `123456`
 
-### SharedPreferences（用户偏好设置）
-
-#### 存储内容
-- **用户名**: 用于个人中心页面显示
-- **签名**: 用户个性签名
-
-#### 使用场景
-- **不在注册时存储**: 注册时只存储到 Room 数据库
-- **不在登录时存储**: 登录时通过 Intent 传递用户名
-- **在个人中心**: 用于显示和保存用户偏好设置（用户名、签名）
-
-#### 数据位置
-- 文件路径: `/data/data/com.example.bytedancedemo1/shared_prefs/user_prefs.xml`
-- 查看方式: 使用 Android Studio 的 Device File Explorer 或 adb 命令
 
 ## 🎨 UI 设计
 
@@ -285,4 +262,4 @@ public class User {
 
 ---
 
-**最后更新**: 2024年
+
