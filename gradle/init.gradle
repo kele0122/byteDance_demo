@@ -1,0 +1,39 @@
+// 全局禁用源码和文档下载
+// 这个脚本会在所有 Gradle 构建之前执行
+
+// 禁用所有项目的源码下载和转换
+allprojects {
+    afterEvaluate { project ->
+        project.configurations.all { configuration ->
+            // 禁用源码目录转换 - 解决 TransformException
+            try {
+                configuration.attributes {
+                    def artifactType = org.gradle.api.attributes.Attribute.of("artifactType", String.class)
+                    if (hasAttribute(artifactType)) {
+                        def currentType = getAttribute(artifactType)
+                        if (currentType == "src-directory" || currentType == "directory") {
+                            attribute(artifactType, "jar")
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                // 忽略配置错误
+            }
+            
+            // 禁用源码和文档变体
+            configuration.resolutionStrategy {
+                // 拒绝 Gradle 源码依赖
+                componentSelection {
+                    all { selection ->
+                        def version = selection.candidate.version
+                        if (selection.candidate.group == "gradle" && 
+                            selection.candidate.module == "gradle" && 
+                            version != null && version.toString().contains("-src")) {
+                            selection.reject("禁用 Gradle 源码下载")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

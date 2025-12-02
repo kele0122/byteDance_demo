@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册账号"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 副标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建您的新账户"
+            android:textSize="14sp"
+            android:textColor="@color/text_gray"
+            android:layout_marginBottom="48dp" />
+
+        <!-- 用户名输入框 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/input_background"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxStrokeWidth="0dp"
+            app:hintEnabled="false"
+            app:startIconDrawable="@android:drawable/ic_dialog_email"
+            app:startIconTint="@color/text_gray"
+            app:startIconContentDescription="用户名图标">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入用户名或邮箱"
+                android:inputType="text"
+                android:minHeight="56dp"
+                android:textSize="16sp"
+                android:background="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 密码输入框 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/input_background"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxStrokeWidth="0dp"
+            app:hintEnabled="false"
+            app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+            app:startIconTint="@color/text_gray"
+            app:startIconContentDescription="密码图标"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/text_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:minHeight="56dp"
+                android:textSize="16sp"
+                android:background="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 确认密码输入框 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/input_background"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxStrokeWidth="0dp"
+            app:hintEnabled="false"
+            app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+            app:startIconTint="@color/text_gray"
+            app:startIconContentDescription="确认密码图标"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/text_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请再次输入密码"
+                android:inputType="textPassword"
+                android:minHeight="56dp"
+                android:textSize="16sp"
+                android:background="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 注册按钮 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="24dp"
+            android:text="注册"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:backgroundTint="@color/primary_blue"
+            app:cornerRadius="8dp" />
+
+        <!-- 已有账号链接 -->
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已有账户?立即登录"
+            android:textSize="14sp"
+            android:textColor="@color/primary_blue"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+</ScrollView>
+

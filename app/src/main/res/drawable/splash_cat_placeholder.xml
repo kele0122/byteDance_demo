@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    占位符说明：
+    请将猫猫图片重命名为 splash_cat.jpg 或 splash_cat.png
+    并放到 app/src/main/res/drawable/ 目录下
+    
+    支持的图片格式：jpg, png, webp
+    建议尺寸：1080x1920 或更高（适配不同屏幕）
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#F5F5F5" />
+    <corners android:radius="0dp" />
+</shape>
+
+
+
