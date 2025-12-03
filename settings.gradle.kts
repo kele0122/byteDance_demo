@@ -34,3 +34,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "byteDance demo1"
 include(":app")
+include(":monitoringsdk")

@@ -113,8 +113,6 @@ public class LoginActivity extends AppCompatActivity {
         
         if (user != null) {
             // 登录成功，从Room数据库读取用户名
-            // 注意：SharedPreferences只用于存储用户名和签名，不在登录时存储
-            // 用户名和签名应该在个人中心页面设置时存储
             
             // 跳转到个人中心页面，传递用户名
             Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);

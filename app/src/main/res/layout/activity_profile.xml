@@ -300,4 +300,16 @@
         </LinearLayout>
     </LinearLayout>
 
+    <!-- ANR 测试按钮 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTestAnr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="测试 ANR 监控（点击后主线程将阻塞6秒）"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@color/primary_blue"
+        android:padding="16dp" />
+
 </LinearLayout>
